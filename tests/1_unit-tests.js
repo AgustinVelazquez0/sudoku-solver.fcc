@@ -15,7 +15,6 @@ suite("Unit Tests", () => {
   test("Logic handles a puzzle string with invalid characters (not 1-9 or .)", () => {
     const invalidCharPuzzle =
       "1.5..2.84..63.12.7.2..5a....9..1....8.2.3674.3.7.2..9.47...8..1..16....926914.37.";
-    // El método probablemente devuelve un mensaje de error específico
     assert.equal(
       solver.validate(invalidCharPuzzle),
       "Invalid characters in puzzle"
@@ -25,7 +24,6 @@ suite("Unit Tests", () => {
   test("Logic handles a puzzle string that is not 81 characters in length", () => {
     const shortPuzzle =
       "1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9.47...8..1..16....926914.3";
-    // El método probablemente devuelve un mensaje de error específico
     assert.equal(
       solver.validate(shortPuzzle),
       "Expected puzzle to be 81 characters long"
@@ -93,7 +91,7 @@ suite("Unit Tests", () => {
     const validPuzzle =
       "1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9.47...8..1..16....926914.37.";
     const solution = solver.solve(validPuzzle);
-    // Tu método solve devuelve directamente la solución como string
+    // El método solve devuelve directamente la solución como string
     assert.isString(solution);
     assert.lengthOf(solution, 81);
   });
@@ -102,7 +100,7 @@ suite("Unit Tests", () => {
     const invalidPuzzle =
       "115..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9.47...8..1..16....926914.37.";
     const result = solver.solve(invalidPuzzle);
-    // Tu método solve devuelve un mensaje de error como string
+    // El método solve devuelve un mensaje de error como string
     assert.equal(result, "Puzzle cannot be solved");
   });
 

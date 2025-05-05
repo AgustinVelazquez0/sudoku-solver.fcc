@@ -108,8 +108,8 @@ class SudokuSolver {
     }
 
     // Identificamos el bloque 3x3 al que pertenece
-    const startRow = Math.floor(rowIndex / 3) * 3; // fila inicial del bloque 3x3
-    const startCol = Math.floor(colIndex / 3) * 3; // columna inicial del bloque 3x3
+    const startRow = Math.floor(rowIndex / 3) * 3;
+    const startCol = Math.floor(colIndex / 3) * 3;
 
     // Recorremos las 9 posiciones de la región 3x3
     for (let i = startRow; i < startRow + 3; i++) {
@@ -231,7 +231,7 @@ class SudokuSolver {
       if (solveBoard()) {
         return board.join(""); // Retornamos el puzzle resuelto
       } else {
-        return "Puzzle cannot be solved"; // Si no se puede resolver, retornamos un mensaje de error
+        return "Puzzle cannot be solved"; //
       }
     } catch (error) {
       console.error("Error al resolver el puzzle:", error);
